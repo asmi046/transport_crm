@@ -14,4 +14,4 @@ use App\Http\Controllers\VatsMessageController;
 |
 */
 
-Route::match(['get', 'post'],'/crm_messages', [VatsMessageController::class, "index"])->name('crm_messages');
+Route::any('/crm_messages', [VatsMessageController::class, "index"])->name('crm_messages');
