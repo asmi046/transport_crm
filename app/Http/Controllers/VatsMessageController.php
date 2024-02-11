@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Models\VatsMessage;
+
+use Illuminate\Http\Request;
+use App\Events\RegisterVatsMessageEvent;
 
 class VatsMessageController extends Controller
 {
@@ -15,12 +16,14 @@ class VatsMessageController extends Controller
 
 
 
-        VatsMessage::create(
+        $message = VatsMessage::create(
            [
             "ip" => $request->getClientIp(),
             "method" =>  $request->method(),
             "src_content" => json_encode($request->all()),
            ]
         );
+
+        broadcast(new RegisterVatsMessageEvent($message));
     }
 }

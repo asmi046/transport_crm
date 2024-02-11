@@ -9,6 +9,12 @@
 @section('description', $description)
 
 @section('main')
-    <h1>Тест входящих сообщений</h1>
+ <section id="global_app">
+    <div class="container">
+        <h1>Тест входящих сообщений</h1>
+        <vats-mesages></vats-mesagess>
+    </div>
+ </section>
+
 @endsection
 
