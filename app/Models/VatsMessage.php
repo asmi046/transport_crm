@@ -12,6 +12,8 @@ class VatsMessage extends Model
     protected $fillable = [
         'ip',
         'method',
+        'cmd',
+        'phone',
         'src_content',
     ];
 }

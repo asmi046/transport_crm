@@ -16,6 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->string("ip")->comment("ip адрес");
             $table->string("method", 20)->comment("Метод запроса");
+            $table->string("cmd")->comment("Поступившая команда");
+            $table->string("phone")->comment("Телефон");
             $table->json("src_content")->comment("Содержимое запроса");
         });
     }

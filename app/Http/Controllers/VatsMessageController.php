@@ -15,12 +15,15 @@ class VatsMessageController extends Controller
         if ($crm_token !== "112233") abort('419');
 
 
+        $vats_message = $request->all();
 
         $message = VatsMessage::create(
            [
             "ip" => $request->getClientIp(),
             "method" =>  $request->method(),
-            "src_content" => json_encode($request->all()),
+            "cmd" => $vats_message["cmd"],
+            "phone" => $vats_message["phone"],
+            "src_content" => json_encode($vats_message),
            ]
         );
 

@@ -1,11 +1,14 @@
 <template>
     <div class="messages">
         <div v-for="item in messages" :key="item.id"  class="message">
-            <p>{{ item.id }}</p>
-            <p>{{ item.ip }}</p>
-            <p>{{ item.created_at }}</p>
-            <p>{{ item.method }}</p>
+            <p class="data_time">{{ item.created_at }}</p>
+            <p class="phone">{{ item.phone }}</p>
+            <p v-if="item.cmd == 'contact'" class="type"> Входящий звонок </p>
+            <p v-if="item.cmd == 'history'" class="type"> История звонков </p>
+            <p v-if="item.cmd != 'history' && item.cmd != 'contact'" class="type"> {{item.cmd}} </p>
         </div>
+
+        <p v-if="messages.length == 0">Ожидаем входящих сообщений</p>
     </div>
 </template>
 

@@ -27,3 +27,34 @@ section{
     max-width: $conteiner_max_w;
     margin: 0 auto;
 }
+
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    .message {
+        margin: 10px 0;
+        padding: 20px;
+        max-width: 320px;
+        border-radius: $border_rad;
+        border: 1px dotted $gray_border_color;
+        display: flex;
+        flex-direction: column;
+        background-color: $gray_bg_color;
+        p {
+            margin: 10px 0;
+        }
+
+        .phone{
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .type {
+            background-color: $main_color;
+             color: white;
+             padding: 5px 10px;
+             border-radius: 5px;
+        }
+    }
+}
