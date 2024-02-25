@@ -3,6 +3,8 @@ import {createApp} from 'vue/dist/vue.esm-bundler';
 
 import VatsMesages from './components/VatsMesages.vue'
 
+// import AmiClient from 'asterisk-ami-client/AmiClient.js';
+
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 

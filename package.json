@@ -41,6 +41,7 @@
     },
     "dependencies": {
         "@vitejs/plugin-vue": "^5.0.4",
+        "asterisk-ami-client": "^1.1.5",
         "vue": "^3.4.18",
         "vue-axios": "^3.5.2"
     }
